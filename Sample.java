@@ -1,20 +1,18 @@
-package com.cg.string;
+package com.cg.exceptionhandling;
 
 public class Sample {
 
 	public static void main(String[] args) {
-		
-	    String first = "Java";
-	    String second = "Python";
-	    String third = "JavaScript";
+		try {
 
-	    System.out.println(first);   
-	    System.out.println(second);
-	    System.out.println(third);
-	    
-	    // get the length of 
-	    int length = third.length();
-	    System.out.println("Length: " + length);
+		      // code that generate exception
+		      int divideByZero = 5 / 0;
+		      System.out.println("Rest of code in try block");
+		    }
+		    
+		    catch (ArithmeticException e) {
+		      System.out.println("ArithmeticException => " + e.getMessage());
+		    }
 
 	}
 
